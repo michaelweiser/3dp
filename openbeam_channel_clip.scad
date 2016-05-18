@@ -18,7 +18,7 @@ module stay(thickness = 0.5, bulging = 1.2, protrusion = 2, slant = 14) {
 
 module half_clip(width = 10,
 		flex_channel_radius = 0.6,
-		stay_thickness = 0.5, stay_pressure_fudge = 0.35,
+		stay_thickness = 0.3, stay_pressure_fudge = 0.35,
 		plate_thickness = 1.5,
 		ob_channel_width = 3.2) {
 	difference() {
@@ -35,7 +35,7 @@ module half_clip(width = 10,
 	}
 }
 
-module clip(width = 10, height = 10) {
+module clip(width = 10, height = 5) {
 	linear_extrude(height)
 		union() {
 			// two half-clips back-to-back
