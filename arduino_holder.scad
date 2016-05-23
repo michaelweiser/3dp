@@ -80,7 +80,7 @@ module arduino_holder(boardtype = 6,
 		mount_height = 0,
 		mount_hole_diameter = 3.2,
 		mount_hole_offset = 0) {
-	mount_height = mount_height == 0 ? 2.75 * extrusion_width : mount_height;
+	mount_height = mount_height == 0 ? 1.75 * extrusion_width : mount_height;
 	mount_hole_offset = mount_hole_offset == 0 ? extrusion_width * 0.25 : mount_hole_offset;
 
 	union() {
