@@ -74,6 +74,7 @@ module arduino_holder(boardtype = 6,
 		base_recess = 1.5,
 		base_rounding = 3,
 		oversize = 5,
+		ramps_additional_width = 10,
 		mount_thickness = 2,
 		extrusion_width = 15,
 		mount_width = 10,
@@ -85,7 +86,7 @@ module arduino_holder(boardtype = 6,
 
 	union() {
 		dimensions = boardDimensions(boardType = boardtype);
-		board_width = dimensions[0];
+		board_width = dimensions[0] + ramps_additional_width;
 		board_length = dimensions[1];
 		base_width = board_width + oversize + mount_thickness;
 		base_length = board_length + oversize + 2 * mount_thickness;
