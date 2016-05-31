@@ -68,14 +68,15 @@ module arduino_holder_mount(thickness, width, height, hole_offset, hole_diameter
 //  TAP == 0
 //  PIN == 1
 module arduino_holder(boardtype = 6,
-		mounttype = 1,
+		mounttype = 0,
+		board_hole_radius = 1.6,
 		standoff_height = 3,
-		base_height = 2,
-		base_recess = 1.5,
+		base_height = 3,
+		base_recess = 2,
 		base_rounding = 3,
 		oversize = 5,
 		ramps_additional_width = 10,
-		mount_thickness = 2,
+		mount_thickness = 3,
 		extrusion_width = 15,
 		mount_width = 10,
 		mount_height = 0,
@@ -121,7 +122,8 @@ module arduino_holder(boardtype = 6,
 			rotate([0, 0, 90]) {
 				standoffs(boardType = boardtype,
 					mountType = mounttype,
-					height = standoff_height);
+					height = standoff_height,
+					holeRadius = board_hole_radius);
 
 				translate([0, 0, standoff_height])
 					%arduino(boardType = boardtype);
