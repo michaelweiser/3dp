@@ -123,7 +123,9 @@ module arduino_holder(boardtype = 6,
 				standoffs(boardType = boardtype,
 					mountType = mounttype,
 					height = standoff_height,
-					holeRadius = board_hole_radius);
+					holeRadius = board_hole_radius,
+					topRadius = board_hole_radius + 1,
+					bottomRadius =  board_hole_radius + 2);
 
 				translate([0, 0, standoff_height])
 					%arduino(boardType = boardtype);
