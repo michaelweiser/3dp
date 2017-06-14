@@ -19,7 +19,7 @@ module endstop() {
     translate([0, -3-thickness/2, -3]) rotate([0, 180, 0]) {
       for (x = [-6.5/2, 6.5/2]) {
         translate([x, 0, 0]) rotate([90, 0, 0])
-          cylinder(r=2/2, h=40, center=true, $fn=12);
+          cylinder(r=1.6/2, h=40, center=true, $fn=12);
       }
     }
   }
